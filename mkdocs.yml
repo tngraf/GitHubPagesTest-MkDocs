@@ -1,0 +1,44 @@
+site_name: GitHubPagesTest
+site_url: https://sitename.example
+
+theme:
+  name: material
+  icon:
+    logo: fontawesome/solid/w
+  font:
+    text: Merriweather Sans
+    code: Red Hat Mono
+  palette:
+  # dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: deep orange
+
+# see Material Emoji Documentation
+# https://squidfunk.github.io/mkdocs-material/extensions/emoji/
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+
+# Directory settings (default)
+docs_dir: docs
+site_dir: site
