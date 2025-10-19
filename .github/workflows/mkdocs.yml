@@ -34,7 +34,11 @@ jobs:
           path: ~/.cache 
           restore-keys: |
             mkdocs-material-
+
       - run: pip install mkdocs-material 
+      
+      # NEW: dot not use mkdocs gh-pages, instead use normal build
+      # and the GitHub Pages deployment action
       - run: mkdocs build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
